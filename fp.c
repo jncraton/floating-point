@@ -102,6 +102,15 @@ int main() {
   test_int_equal(negate(-1), 1);
   test_int_equal(negate(16), -16);
 
+  printf("\nUnbiased Exponent tests\n");
+  test_int_equal(get_unbiased_exponent(0), 0);
+  test_int_equal(get_unbiased_exponent(-1), 127);
+  test_int_equal(get_unbiased_exponent(16), 131);
+  test_int_equal(get_unbiased_exponent(.5), 126);
+  test_int_equal(get_unbiased_exponent(3), 128);
+  test_int_equal(get_unbiased_exponent(.9), 126);
+  test_int_equal(get_unbiased_exponent(457.2), 135);
+
   printf("\nExponent tests\n");
   test_int_equal(get_exponent(0), -127);
   test_int_equal(get_exponent(-1), 0);
@@ -125,5 +134,8 @@ int main() {
   test_int_equal(float_to_int(1), 1);
   test_int_equal(float_to_int(-1), -1);
   test_int_equal(float_to_int(16.5), 16);
+  test_int_equal(float_to_int(408.3), 408);
   test_int_equal(float_to_int(-301.2), -301);
+  test_int_equal(float_to_int(0.00000001), 0);
+  test_int_equal(float_to_int(49598123.12), 49598124);
 }
