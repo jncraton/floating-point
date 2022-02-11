@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /*
  * Helper functions. These can be left alone.
@@ -61,6 +62,8 @@ unsigned int get_unbiased_exponent(float f) {
 int get_exponent(float f) {
   /*
    * Returns the exponent value of the passed float including the bias 
+   *
+   * Hint: You may call `get_unbiased_exponent`
    */
 
   return 0;
@@ -77,6 +80,11 @@ unsigned int get_mantissa(float f) {
 int float_to_int(float f) {
   /*
    * Converts a float to an int 
+   *
+   * Hint 1: Call the other functions you've implemented
+   * 
+   * Hint 2: Shift operators in C produced undefined results if shifting by 
+   * more than the operand word size
    */
 
   return 0;
