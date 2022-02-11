@@ -16,7 +16,7 @@ The first four functions provide the framework to create a software-based float 
 Implementation Notes
 --------------------
 
-Floating point includes a number of special cases. The implementation in this assignment need only properly handle [normal numbers]. It could be extended to support other numbers, such as [zero](https://en.wikipedia.org/wiki/Signed_zero).
+Floating point includes a number of special cases. The implementation in this assignment need only properly handle [normal numbers](https://en.wikipedia.org/wiki/Normal_number_(computing)). It could be extended to support other numbers, such as [zero](https://en.wikipedia.org/wiki/Signed_zero).
 
 Testing
 -------
