@@ -9,8 +9,9 @@ You will create implementations for the following functions:
 - `get_unbiased_exponent`
 - `get_exponent`
 - `get_mantissa`
+- `float_to_int`
 
-The functions provide the framework to create a software-based float to int converter. These function will then be combined to create a float to in converter in the function `float_to_int`.
+The first four functions provide the framework to create a software-based float to int converter. These function will then be combined to create a float to int converter in the function `float_to_int`.
 
 Implementation Notes
 --------------------
