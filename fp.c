@@ -4,27 +4,27 @@
  * Helper functions. These can be left alone.
  */
 
-char* int_to_bin(int val){
+char *int_to_bin(int val) {
   // Convert an int to bits to print as a string
-	static char buf[33] = {0};
-		
-	for(int i = 31; i >= 0; i -= 1) {
-		buf[i] = "01"[val & 1];
-		val = val >> 1;
+  static char buf[33] = { 0 };
+
+  for (int i = 31; i >= 0; i -= 1) {
+    buf[i] = "01"[val & 1];
+    val = val >> 1;
   }
-	
-	return buf;
+
+  return buf;
 }
 
 unsigned int as_int(float f) {
   // Aliases the passed float as an integer
   // This allows integer operations such as masks and shifts
-  return *(unsigned int*) &f;
+  return *(unsigned int *) &f;
 }
 
 float as_float(int i) {
   // Aliases the passed int as a float
-  return *(float*) &i;
+  return *(float *) &i;
 }
 
 /*
@@ -33,21 +33,20 @@ float as_float(int i) {
 
 unsigned int is_negative(float f) {
   // Return true if the supplied float is negative
-  
+
   return 0;
 }
-
 
 int negate(int i) {
   // This should be implemented using bitwise invert and addition as a 
   // review of two's complement
-  
+
   return 0;
 }
 
 unsigned int get_unbiased_exponent(float f) {
   // Returns the unbiased exponent of the passed float
-  
+
   return 0;
 }
 
