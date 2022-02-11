@@ -74,7 +74,12 @@ int float_to_int(float f) {
   /*
    * Converts a float to an int 
    *
+   * This function must perform the conversion manually. You may not
+   * simply cast the float to an int
+   *
    * Hint 1: Call the other functions you've implemented
+   *
+   * Hint 2: You need the left shift (<<) and right shift (>>) operators
    * 
    * Hint 2: Shift operators in C produced undefined results if shifting by 
    * more than the operand word size
