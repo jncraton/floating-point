@@ -100,6 +100,7 @@ It is not recommended to modify any code below this point
 printf("Test %s == %d ", #exp, result); \
 if ((exp) != result) { \
   printf("FAILED as %d.\n", exp); \
+  exit(1); \
 } else { \
   printf("succeeded.\n"); \
 }
@@ -108,6 +109,7 @@ if ((exp) != result) { \
 printf("Test %s == %f ", #exp, result); \
 if ((exp) != result) { \
   printf("FAILED as %f.\n", exp); \
+  exit(1); \
 } else { \
   printf("succeeded.\n"); \
 }
@@ -116,7 +118,8 @@ int main() {
   printf("Sign bit tests\n");
   test_int_equal(is_negative(0), 0);
   test_int_equal(!is_negative(-1), 0);
-  test_int_equal(is_negative(16), 0);
+  test_int_equal(!is_negative(-5863921.5), 0);
+  test_int_equal(is_negative(16.23), 0);
 
   printf("\nUnbiased Exponent tests\n");
   test_int_equal(get_unbiased_exponent(0), 0);
@@ -137,7 +140,6 @@ int main() {
   test_int_equal(get_exponent(457.2), 8);
 
   printf("\nMantissa tests\n");
-  test_int_equal(get_mantissa(0), 0);
   test_int_equal(get_mantissa(-1), 8388608);
   test_int_equal(get_mantissa(16), 8388608);
   test_int_equal(get_mantissa(.5), 8388608);
@@ -146,7 +148,6 @@ int main() {
   test_int_equal(get_mantissa(457.2), 14981530);
 
   printf("\nfloat_to_int tests\n");
-  test_int_equal(float_to_int(0), 0);
   test_int_equal(float_to_int(1), 1);
   test_int_equal(float_to_int(-1), -1);
   test_int_equal(float_to_int(16.5), 16);
