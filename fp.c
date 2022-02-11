@@ -44,9 +44,9 @@ unsigned int is_negative(float f) {
   return 0;
 }
 
-unsigned int get_unbiased_exponent(float f) {
+unsigned int get_raw_exponent(float f) {
   /*
-   * Returns the unbiased exponent of the passed float 
+   * Returns the raw unsigned exponent bits of the passed float 
    */
 
   return 0;
@@ -56,7 +56,7 @@ int get_exponent(float f) {
   /*
    * Returns the exponent value of the passed float including the bias 
    *
-   * Hint: You may call `get_unbiased_exponent`
+   * Hint: You may call `get_raw_exponent`
    */
 
   return 0;
@@ -120,13 +120,13 @@ int main() {
   test_int_equal(is_negative(16.23), 0);
 
   printf("\nUnbiased Exponent tests\n");
-  test_int_equal(get_unbiased_exponent(0), 0);
-  test_int_equal(get_unbiased_exponent(-1), 127);
-  test_int_equal(get_unbiased_exponent(16), 131);
-  test_int_equal(get_unbiased_exponent(.5), 126);
-  test_int_equal(get_unbiased_exponent(3), 128);
-  test_int_equal(get_unbiased_exponent(.9), 126);
-  test_int_equal(get_unbiased_exponent(457.2), 135);
+  test_int_equal(get_raw_exponent(0), 0);
+  test_int_equal(get_raw_exponent(-1), 127);
+  test_int_equal(get_raw_exponent(16), 131);
+  test_int_equal(get_raw_exponent(.5), 126);
+  test_int_equal(get_raw_exponent(3), 128);
+  test_int_equal(get_raw_exponent(.9), 126);
+  test_int_equal(get_raw_exponent(457.2), 135);
 
   printf("\nExponent tests\n");
   test_int_equal(get_exponent(0), -127);
