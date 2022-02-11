@@ -5,7 +5,10 @@
  */
 
 char *int_to_bin(int val) {
-  // Convert an int to bits to print as a string
+  /*
+   * Convert an int to bits to print as a string Example usage: int number =
+   * 7; printf("Number in binary: %s\n", int_to_bin(number)); 
+   */
   static char buf[33] = { 0 };
 
   for (int i = 31; i >= 0; i -= 1) {
@@ -17,13 +20,18 @@ char *int_to_bin(int val) {
 }
 
 unsigned int as_int(float f) {
-  // Aliases the passed float as an integer
-  // This allows integer operations such as masks and shifts
+  /*
+   * Aliases the passed float as an integer
+   *
+   * This allows integer operations such as masks and shifts
+   */
   return *(unsigned int *) &f;
 }
 
 float as_float(int i) {
-  // Aliases the passed int as a float
+  /*
+   * Aliases the passed int as a float 
+   */
   return *(float *) &i;
 }
 
@@ -32,38 +40,41 @@ float as_float(int i) {
  */
 
 unsigned int is_negative(float f) {
-  // Return true if the supplied float is negative
-
-  return 0;
-}
-
-int negate(int i) {
-  // This should be implemented using bitwise invert and addition as a 
-  // review of two's complement
+  /*
+   * Return true if the supplied float is negative 
+   */
 
   return 0;
 }
 
 unsigned int get_unbiased_exponent(float f) {
-  // Returns the unbiased exponent of the passed float
+  /*
+   * Returns the unbiased exponent of the passed float 
+   */
 
   return 0;
 }
 
 int get_exponent(float f) {
-  // Returns the exponent value of the passed float including the bias
+  /*
+   * Returns the exponent value of the passed float including the bias 
+   */
 
   return 0;
 }
 
 unsigned int get_mantissa(float f) {
-  // Returns the mantissa of the passed float
+  /*
+   * Returns the mantissa of the passed float 
+   */
 
   return 0;
 }
 
 int float_to_int(float f) {
-  // Converts a float to an int
+  /*
+   * Converts a float to an int 
+   */
 
   return 0;
 }
@@ -95,11 +106,6 @@ int main() {
   test_int_equal(is_negative(0), 0);
   test_int_equal(!is_negative(-1), 0);
   test_int_equal(is_negative(16), 0);
-
-  printf("\nNegation tests\n");
-  test_int_equal(negate(0), 0);
-  test_int_equal(negate(-1), 1);
-  test_int_equal(negate(16), -16);
 
   printf("\nUnbiased Exponent tests\n");
   test_int_equal(get_unbiased_exponent(0), 0);
