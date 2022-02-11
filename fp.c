@@ -32,13 +32,6 @@ unsigned int as_int(float f) {
   return *(unsigned int *) &f;
 }
 
-float as_float(int i) {
-  /*
-   * Aliases the passed int as a float 
-   */
-  return *(float *) &i;
-}
-
 /*
  * Provide Implementations for the following functions
  */
