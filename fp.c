@@ -6,8 +6,11 @@
 
 char *int_to_bin(int val) {
   /*
-   * Convert an int to bits to print as a string Example usage: int number =
-   * 7; printf("Number in binary: %s\n", int_to_bin(number)); 
+   * Convert an int to bits to print as a string 
+   *
+   * Example usage: 
+   * int number = 7; 
+   * printf("Number in binary: %s\n", int_to_bin(number)); 
    */
   static char buf[33] = { 0 };
 
