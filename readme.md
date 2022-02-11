@@ -16,7 +16,7 @@ The first four functions provide the framework to create a software-based float 
 Implementation Notes
 --------------------
 
-Floating point includes a number of special cases. The implementation in this assignment need only properly handle [normal numbers](https://en.wikipedia.org/wiki/Normal_number_(computing)). It could be extended to support other numbers, such as [zero](https://en.wikipedia.org/wiki/Signed_zero).
+The [IEEE Standard for Floating-Point Arithmetic](https://en.wikipedia.org/wiki/IEEE_754) includes a number of special cases. The implementation in this assignment need only properly handle [normal numbers](https://en.wikipedia.org/wiki/Normal_number_(computing)). It could be extended to support other numbers, such as [zero](https://en.wikipedia.org/wiki/Signed_zero).
 
 Testing
 -------
