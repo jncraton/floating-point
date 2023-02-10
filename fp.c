@@ -121,7 +121,7 @@ int main() {
   test_int_equal(!is_negative(-5863921.5), 0);
   test_int_equal(is_negative(16.23), 0);
 
-  printf("\nUnbiased Exponent tests\n");
+  printf("\nRaw Exponent tests\n");
   test_int_equal(get_raw_exponent(0), 0);
   test_int_equal(get_raw_exponent(-1), 127);
   test_int_equal(get_raw_exponent(16), 131);
