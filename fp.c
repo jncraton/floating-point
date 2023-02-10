@@ -32,9 +32,9 @@ unsigned int as_int(float f) {
   return *(unsigned int *) &f;
 }
 
-#define print_binary(value) \
+#define print_binary(v) \
   printf("Value at line %d is 0b%s (%.02f)\n", \
-  __LINE__, as_bin_str(*(unsigned int *) &f), *(float *) &f)
+  __LINE__, as_bin_str(*(unsigned int *) &v), *(float *) &v)
 
 /*
  * Provide Implementations for the following functions
