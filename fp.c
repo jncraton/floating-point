@@ -104,7 +104,7 @@ int _test_int_equal_result;
 printf("Testing %s == %d\n", #exp, result); \
 _test_int_equal_result = exp; \
 if ((_test_int_equal_result) != result) { \
-  printf("Test %s == %d FAILED (got %d).\n", #exp, result, _test_int_equal_result); \
+  printf("Test for %s == %d FAILED (got %d)\n", #exp, result, _test_int_equal_result); \
   exit(1); \
 }
 
