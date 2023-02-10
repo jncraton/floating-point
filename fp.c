@@ -5,7 +5,7 @@
  * Helper functions. These can be left alone.
  */
 
-char *int_to_bin(int val) {
+char *as_bin_str(int val) {
   /*
    * Convert an int to bits to print as a string 
    *
