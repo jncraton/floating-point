@@ -98,20 +98,14 @@ Test code
 It is not recommended to modify any code below this point
 */
 
+int _test_int_equal_result;
+
 #define test_int_equal(exp, result) \
 printf("Testing %s == %d\n", #exp, result); \
-if ((exp) != result) { \
-  printf("Test %s == %d FAILED (got %d).\n", #exp, result, exp); \
+_test_int_equal_result = exp; \
+if ((_test_int_equal_result) != result) { \
+  printf("Test %s == %d FAILED (got %d).\n", #exp, result, _test_int_equal_result); \
   exit(1); \
-}
-
-#define test_float_equal(exp, result) \
-printf("Test %s == %f ", #exp, result); \
-if ((exp) != result) { \
-  printf("FAILED as %f.\n", exp); \
-  exit(1); \
-} else { \
-  printf("succeeded.\n"); \
 }
 
 int main() {
