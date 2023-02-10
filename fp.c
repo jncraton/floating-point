@@ -151,4 +151,6 @@ int main() {
   test_int_equal(float_to_int(-301.2), -301);
   test_int_equal(float_to_int(0.00000001), 0);
   test_int_equal(float_to_int(49598123.12), 49598124);
+
+  printf("\nAll tests passed.\n");
 }
