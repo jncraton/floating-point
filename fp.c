@@ -33,8 +33,8 @@ unsigned int as_int(float f) {
 }
 
 #define print_binary(v) \
-  printf("Value at line %d is 0b%s (%.02f)\n", \
-  __LINE__, as_bin_str(*(unsigned int *) &v), *(float *) &v)
+  printf("0b%s for %s at line %d (%.02f)\n", \
+  as_bin_str(*(unsigned int *) &v), #v, __LINE__, *(float *) &v)
 
 /*
  * Provide Implementations for the following functions
