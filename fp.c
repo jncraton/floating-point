@@ -95,12 +95,10 @@ It is not recommended to modify any code below this point
 */
 
 #define test_int_equal(exp, result) \
-printf("Test %s == %d ", #exp, result); \
+printf("Testing %s == %d\n", #exp, result); \
 if ((exp) != result) { \
-  printf("FAILED as %d.\n", exp); \
+  printf("Test %s == %d FAILED (got %d).\n", #exp, result, exp); \
   exit(1); \
-} else { \
-  printf("succeeded.\n"); \
 }
 
 #define test_float_equal(exp, result) \
