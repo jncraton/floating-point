@@ -1,6 +1,8 @@
 Floating Point Conversion
 =========================
 
+![IEEE 754 Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/1180px-Float_example.svg.png)
+
 This assignment demonstrates converting from a floating point number to an integer using only integer and bitwise operations.
 
 You will create implementations for the following functions:
@@ -12,7 +14,7 @@ You will create implementations for the following functions:
 - `get_mantissa`
 - `float_to_int`
 
-The first four functions provide the framework to create a software-based float to int converter. These function will then be combined to create a float to int converter in the function `float_to_int`.
+The first five functions provide the framework to create a software-based float to int converter. These function will then be combined to create a float to int converter in the function `float_to_int`.
 
 Implementation Notes
 --------------------
@@ -27,3 +29,5 @@ The included makefile will build the fp.c file and run a series of tests to conf
 ```
 make test
 ```
+
+It is strongly recommend to read the tests included at the bottom of the `fp.c` program in order to help understand the specification for each of the functions to be implemented.
