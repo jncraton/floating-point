@@ -94,7 +94,7 @@ int float_to_int(float f) {
    * Hint 2: You need the left shift (<<) and right shift (>>) operators
    * 
    * Hint 3: Shift operators in C produce undefined results if shifting by
-   * more than the operand word size
+   * more than the operand word size or if shifting by a negative number
    */
 
   return 0;
