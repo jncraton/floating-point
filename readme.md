@@ -16,6 +16,8 @@ You will create implementations for the following functions:
 
 The first five functions provide the framework to create a software-based float to int converter. These function will then be combined to create a float to int converter in the function `float_to_int`.
 
+This [tool](https://www.h-schmidt.net/FloatConverter/IEEE754.html) may be useful for exploring floating point numbers.
+
 Implementation Notes
 --------------------
 
