@@ -140,6 +140,7 @@ int main() {
   test_int_equal(get_mantissa(3), 12582912);
   test_int_equal(get_mantissa(.9), 15099494);
   test_int_equal(get_mantissa(457.2), 14981530);
+  test_int_equal(get_mantissa(1.9999999), 16777215);
 
   printf("\nfloat_to_int tests\n");
   test_int_equal(float_to_int(1), 1);
@@ -148,6 +149,8 @@ int main() {
   test_int_equal(float_to_int(408.3), 408);
   test_int_equal(float_to_int(-301.2), -301);
   test_int_equal(float_to_int(0.00000001), 0);
+  test_int_equal(float_to_int(1.99), 1);
+  test_int_equal(float_to_int(6.00001), 6);
   test_int_equal(float_to_int(49598123.12), 49598124);
 
   printf("\nAll tests passed.\n");
