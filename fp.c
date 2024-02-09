@@ -66,6 +66,14 @@ int get_exponent(float f) {
   return 0;
 }
 
+unsigned int get_raw_mantissa(float f) {
+  /*
+   * Returns the mantissa as extracted directly from the bit field
+   */
+
+  return 0;
+}
+
 unsigned int get_mantissa(float f) {
   /*
    * Returns the mantissa of the passed float 
@@ -132,6 +140,17 @@ int main() {
   test_int_equal(get_exponent(3), 1);
   test_int_equal(get_exponent(.9), -1);
   test_int_equal(get_exponent(457.2), 8);
+
+  printf("\nRaw mantissa tests\n");
+  test_int_equal(get_raw_mantissa(1.0), 0);
+  test_int_equal(get_raw_mantissa(-0.25), 0);
+  test_int_equal(get_raw_mantissa(-1), 0);
+  test_int_equal(get_raw_mantissa(16), 0);
+  test_int_equal(get_raw_mantissa(.5), 0);
+  test_int_equal(get_raw_mantissa(3), 4194304);
+  test_int_equal(get_raw_mantissa(.9), 6710886);
+  test_int_equal(get_raw_mantissa(457.2), 6592922);
+  test_int_equal(get_raw_mantissa(1.9999999), (1 << 23) - 1);
 
   printf("\nMantissa tests\n");
   test_int_equal(get_mantissa(1.0), 1 << 23);
