@@ -134,9 +134,11 @@ int main() {
   test_int_equal(get_exponent(457.2), 8);
 
   printf("\nMantissa tests\n");
-  test_int_equal(get_mantissa(-1), 8388608);
-  test_int_equal(get_mantissa(16), 8388608);
-  test_int_equal(get_mantissa(.5), 8388608);
+  test_int_equal(get_mantissa(1.0), 1 << 23);
+  test_int_equal(get_mantissa(-0.25), 1 << 23);
+  test_int_equal(get_mantissa(-1), 1 << 23);
+  test_int_equal(get_mantissa(16), 1 << 23);
+  test_int_equal(get_mantissa(.5), 1 << 23);
   test_int_equal(get_mantissa(3), 12582912);
   test_int_equal(get_mantissa(.9), 15099494);
   test_int_equal(get_mantissa(457.2), 14981530);
