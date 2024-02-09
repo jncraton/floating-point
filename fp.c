@@ -111,8 +111,8 @@ if ((_test_int_equal_result) != result) { \
 int main() {
   printf("Sign bit tests\n");
   test_int_equal(is_negative(0), 0);
-  test_int_equal(!is_negative(-1), 0);
-  test_int_equal(!is_negative(-5863921.5), 0);
+  test_int_equal(is_negative(-1), 1);
+  test_int_equal(is_negative(-5863921.5), 1);
   test_int_equal(is_negative(16.23), 0);
 
   printf("\nRaw Exponent tests\n");
