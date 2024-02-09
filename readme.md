@@ -8,6 +8,7 @@ You will create implementations for the following functions:
 - `is_negative`
 - `get_raw_exponent`
 - `get_exponent`
+- `get_raw_mantissa`
 - `get_mantissa`
 - `float_to_int`
 
