@@ -45,3 +45,8 @@ make test
 ```
 
 It is strongly recommend to read the tests included at the bottom of the `fp.c` program in order to help understand the specification for each of the functions to be implemented.
+
+Resources
+---------
+
+- [Floating Point Converter](https://www.h-schmidt.net/FloatConverter/IEEE754.html)
