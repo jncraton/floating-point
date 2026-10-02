@@ -1,7 +1,7 @@
 Floating Point Conversion
 =========================
 
-![IEEE 754 Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/1180px-Float_example.svg.png)
+![IEEE 754 Diagram](https://upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Float_example.svg/960px-Float_example.svg.png)
 
 This assignment demonstrates converting from a floating point number to an integer using only integer and bitwise operations.
 
